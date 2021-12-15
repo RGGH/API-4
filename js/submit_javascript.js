@@ -16,6 +16,11 @@ let _data = {
         projects: vprojects,
         earn: vearn,
   }
+
+  const button = document.getElementById(btn_id);
+    button.addEventListener("click", function() {
+        // Submit form
+    }, {once : true});
   
   const response = await fetch('https://neuro-2fle3wxkia-nw.a.run.app/vars', {
     method: "POST",
