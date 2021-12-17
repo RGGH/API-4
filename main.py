@@ -1,17 +1,21 @@
+""" ML Example for spaCy Ents - API-4
+    "Processing raw text intelligently is difficult"
+    Author : redandgreen
+    version 1.0
+"""
 import uvicorn
+import spacy
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from sklearn.neural_network import MLPRegressor
-import numpy as np
+
+nlp = spacy.load("en_core_web_sm")
 
 app = FastAPI()
 
 output = {}
 
-origins = [
-    "http://redandgreen.co.uk"
-]
+origins = ["http://redandgreen.co.uk"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -21,31 +25,25 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-## questionaire data from csv
-data = np.loadtxt(open("questions.csv", "rb"), delimiter=",", skiprows=1)
-
-## one liner
-# fit first 4 v 5th(last)
-# study per week, years, books, projects, earn, rating
-neural_net = MLPRegressor(max_iter=10000).fit(data[:, :-1], data[:, -1])
-
 
 class request_body(BaseModel):
-    weeks: int
-    years: int
-    books: int
-    projects: int
-    earn: int
+    features: str
 
 
-@app.post("/vars")
-def vars(data: request_body)->dict:
-    ## result
-    rating = neural_net.predict([[data.weeks,data.years,data.books,data.projects,data.earn]])
-    output['rating']= str(rating)
-    return(output)
+@app.post("/ents")
+def vars(data: request_body) -> dict:
+    """Gets the DATE from features (input paragraph)
+    use POST to allow >=255 chars
+    """
+    mytk = nlp(data.features)
+    res_date = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "DATE"
+    ]
+    res_country = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "GPE"
+    ]
 
-
+    return {"date": res_date, "country": res_country}
 
 
 # if __name__ == "__main__":

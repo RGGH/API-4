@@ -1,5 +1,4 @@
 
-  
 
 async function SubmitVars() {
 // data to be sent to the POST request
@@ -17,11 +16,6 @@ let _data = {
         earn: vearn,
   }
 
-  const button = document.getElementById(btn_id);
-    button.addEventListener("click", function() {
-        // Submit form
-    }, {once : true});
-  
   const response = await fetch('https://neuro-2fle3wxkia-nw.a.run.app/vars', {
     method: "POST",
     body: JSON.stringify(_data),
@@ -33,7 +27,6 @@ let _data = {
   var x = document.getElementById("demo");  
   x.style.color = "red"; 
   x.innerHTML = JSON.stringify(responseText).substring(16,24);
-
 
 }
 
