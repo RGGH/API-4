@@ -1,3 +1,3 @@
 # API-4
 Using FastAPI with spaCy to identify entities
-![spacy-ml]('api-spaCy.png')
+![spacy-ml](API-4/blob/main/api-spaCy.png)
