@@ -1,7 +1,7 @@
 """ ML Example for spaCy Ents - API-4
     "Processing raw text intelligently is difficult"
     Author : redandgreen
-    version 1.0
+    version 1.1
 """
 import uvicorn
 import spacy
