@@ -42,8 +42,40 @@ def vars(data: request_body) -> dict:
     res_country = [
         (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "GPE"
     ]
+    res_org = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "ORG"
+    ]
+    res_fac = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "FACILITY"
+    ]
+    res_per = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "PERSON"
+    ]
+    res_mon = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "MONEY"
+    ]
+    res_qua = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "QUANTITY"
+    ]
+    res_woa = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "WORK_OF_ART"
+    ]
+    res_ord = [
+        (token_ent.text) for token_ent in mytk.ents if token_ent.label_ == "ORDINAL"
+    ]
 
-    return {"date": res_date, "country": res_country}
+    
+
+    return {"date": res_date, 
+            "country": res_country, 
+            "organization":res_org,
+            "facility":res_fac, 
+            "people":res_per, 
+            "money":res_mon, 
+            "weight/distance":res_qua,
+            "work of art":res_woa,
+            "ordinal":res_ord
+    }
 
 
 # if __name__ == "__main__":

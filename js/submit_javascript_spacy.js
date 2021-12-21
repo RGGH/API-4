@@ -22,6 +22,7 @@ let _data = {
   let country = (obj.country);
   console.log(date);
   console.log(country);
+  console.log(buildings);
 
 
   var x = document.getElementById("demo1");  
@@ -31,5 +32,9 @@ let _data = {
   var y = document.getElementById("demo2");  
   y.style.color = "red"; 
   y.innerHTML = country;
+
+  var y = document.getElementById("demo3");  
+  y.style.color = "red"; 
+  y.innerHTML = buildings;
 
 }
