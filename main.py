@@ -72,8 +72,8 @@ def vars(data: request_body) -> dict:
             "facility":res_fac, 
             "people":res_per, 
             "money":res_mon, 
-            "weight/distance":res_qua,
-            "work of art":res_woa,
+            "weight_distance":res_qua,
+            "work_of_art":res_woa,
             "ordinal":res_ord
     }
 

@@ -22,14 +22,15 @@
 
 <div class="container">
     <h1>ML FastAPI Python spaCy entity finder</h1>
-    <h3>Enter or paste in a paragraph of text with a year and a country</h3>
+    <h3>Enter some text of your own or use the pre-filled example</h3>
     <br>
         <form class="form-horizontal" role="form">
           <div class="form-group">
             
             <textarea name="para" class="col-sm-offset-2 col-sm-9" 
-                id="para" cols="30" rows="3" placeholder="Enter a paragraph of text containing years and countries and buildings" ></textarea>
-            <div class="col-sm-3">
+                id="para" cols="30" rows="4" placeholder="In 2008 I was earning £1000 a week in London working for Amazon and first heard of 'Thriller' by  Michael Jackson" >ready made example : In 2008 I was earning £1000 a week in London working for Amazon and first heard of 'Thriller' by  Michael Jackson</textarea>
+                 
+                <div class="col-sm-3">
             </div>
           </div>
           <div>
@@ -38,11 +39,32 @@
           </div>
           <p id="msg"></p>
           Date:
-          <h4 id="demo1"></h4>
-          Country:
-          <h4 id="demo2"></h4>
-          Buildings:
-          <h4 id="demo3"></h4>
+          <h4 id="date"></h4>
+          <h4 id="x1"></h4>
+          Geo Political Entity:
+          <h4 id="gpe"></h4>
+          <h4 id="x2"></h4>
+          Organization:
+          <h4 id="org"></h4>
+          <h4 id="x3"></h4>
+          Facility:
+          <h4 id="fac"></h4>
+          <h4 id="x4"></h4>
+          People:
+          <h4 id="person"></h4>
+          <h4 id="x5"></h4>
+          Money:
+          <h4 id="money"></h4>
+          <h4 id="x6"></h4>
+          Weight / Distance:
+          <h4 id="weigh"></h4>
+          <h4 id="x7"></h4>
+          Work of Art:
+          <h4 id="work_of_art"></h4>
+          <h4 id="x8"></h4>
+          Ordinal:
+          <h4 id="ord"></h4>
+          <h4 id="x9"></h4>
         </form>
         <a href="https://github.com/RGGH/API-4">ML + FastAPI code on GitHub</a> 
 <br>
