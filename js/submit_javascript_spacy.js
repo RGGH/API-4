@@ -8,6 +8,8 @@ let _data = {
         features: vpara
   }
 
+  // Google URL should be : https://api-4-mmorfk42na-nw.a.run.app/ents
+
   const response = await fetch('https://api-4-mmorfk42na-nw.a.run.app/ents', {
     method: "POST",
     body: JSON.stringify(_data),
@@ -27,8 +29,9 @@ let _data = {
   let weight_distance= (obj.weight_distance);
   let work_of_art = (obj.work_of_art);
   let ord = (obj.ordinal);
+  let zed = (obj.zed);
 
-  console.log(date,gpe,org,fac,person,money,weight_distance,work_of_art,ord);
+  console.log(date,gpe,org,fac,person,money,weight_distance,work_of_art,ord,zed);
 
   var x1 = document.getElementById("date");  
   x1.style.color = "red"; 
@@ -66,4 +69,9 @@ let _data = {
   x9.style.color = "red"; 
   x9.innerHTML = ord;
 
+}
+
+function eraseText() {
+  document.getElementById("para").value = "";
+  document.getElementById("btn_id").disabled = false;
 }

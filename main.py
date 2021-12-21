@@ -15,8 +15,6 @@ app = FastAPI()
 
 output = {}
 
-origins = ["http://redandgreen.co.uk"]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
