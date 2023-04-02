@@ -4,7 +4,7 @@
 
 clone repo
 
-install requirements
+install requirements and the spaCy 'en_core_web_sm' file
 
 `# python3 -m spacy download en_core_web_sm`
 
@@ -14,7 +14,7 @@ run
 
 open ents.html on localhost "http://127.0.0.1:8000/ents/html"
 
-### Deploy to Google Cloud
+### ~~Deploy to Google Cloud~~
 
 `docker pull rggh/spacy_ner:v1`
 `<br>`
