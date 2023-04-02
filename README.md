@@ -18,4 +18,4 @@ open ents.html on localhost "http://127.0.0.1:8000/ents/html"
 
 ~~`docker pull rggh/spacy_ner:v1`~~
 
-[Spacy](https://github.com/RGGH/API-4/blob/main/api-spcaCy.png)
+[!Spacy](https://github.com/RGGH/API-4/blob/main/api-spcaCy.png)
