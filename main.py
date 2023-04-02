@@ -59,7 +59,7 @@ def vars(data: request_body) -> dict:
     }
 
 
-# uvicorn main:app --reload
-# or
-# if __name__ == "__main__":
-#     uvicorn.run("app.api:app", host="0.0.0.0", port=8000, reload=True)
+#uvicorn main:app --reload
+# # or
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
