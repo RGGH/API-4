@@ -14,12 +14,14 @@ run
 
 open ents.html on localhost "http://127.0.0.1:8000/ents/html"
 
-### Docker
+### Try it out using Docker instead :
 
 `sudo docker pull rggh/spacy_ner:7`<br>
 `sudo docker run -it -p 8000:8000 rggh/spacy_ner:7`<br> 
 
 #### check the app is running with Docker :
 `http://127.0.0.1:8000/docs#/default/vars_ents_post`
+
+#### runt test_1.py to test spaCy function
 
 ![Spacy](https://github.com/RGGH/API-4/blob/main/api-spaCy.png)
