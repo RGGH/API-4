@@ -10,7 +10,7 @@ let _data = {
 
   // Google URL should be : https://api-4-mmorfk42na-nw.a.run.app/ents
 
-  const response = await fetch('https://api-4-mmorfk42na-nw.a.run.app/ents', {
+  const response = await fetch('http://localhost:8000/ents', {
     method: "POST",
     body: JSON.stringify(_data),
     headers: {"Content-type": "application/json; charset=UTF-8"}

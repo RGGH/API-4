@@ -3,6 +3,8 @@
     Author : redandgreen
     version 1.1
 """
+# python3 -m spacy download en_core_web_sm 
+
 import uvicorn
 import spacy
 from fastapi import FastAPI
